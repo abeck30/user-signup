@@ -1,33 +1,35 @@
 <!doctype html>
 <html>
+  <head>
+  </head>  
     <body>
         <style>
           .error {
               color: red
-              }
+                 }
           .form {
               padding: 8px;
-          }
+                }
         </style>
-        <form class="form"   action = "/welcome.html" method = "post">
+        <form class="form"  method="post">
             <h2> Sign-up</h2>
             <label>Username
-                <input type = "text" name = "username" minlength="3" maxlength="20" value ={username}/>
+                <input type = "text" name = "username" minlength="3" maxlength="20" value ='{{username}}' />
             </label>
             <p class="error">{{username_error}}</p>
             <br/>
             <label> Password
-                <input type = "password" name = "password" minlength="3" maxlength="20" value ={pword}/>
+                <input type = "password" name = "pword" minlength="3" maxlength="20" value ='{{pwrod}}' />
             </label>
-            <p class="error">{{password_error}}</p>
+            <p class="error">{{pword_error}}</p>
             <br/>
             <label>Verifiy Password
-                <input type = "password" name = "v-password" minlength="3" maxlength="20" value ={vpword}/>
+                <input type = "password" name = "vpword" minlength="3" maxlength="20" value ='{{vpword}}' />
             </label>
-            <p class="error">{{passwordvalidation_error}}</p>
+            <p class="error">{{vpword_error}}</p>
             <br/>
-            <label> Email (option)
-                <input type = "email" name = "email" />
+            <label> Email (optional)
+                <input type = "email" name = "email" value ='{{email}}' />
             </label>
             <p class="error">{{email_error}}</p>
             <br/>

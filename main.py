@@ -9,13 +9,16 @@ jinja_env = jinja2.Environment (loader = jinja2.FileSystemLoader(template_dir))
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-@app.route ("/")
+@app.route ("/", methods=['POST'])
 def index():
     template = jinja_env.get_template('index.html')
     return template.render()
 
-@app.route()
-def validation():
-    
+@app.route ("/", methods =['POST']) 
+def confirmation():
+    username = request.form['username']
+    template = jinja_env.get_template('welcome.html')
+    return template.render(username=username) 
+   
 
-app.run()
+app.run() 
