@@ -11,20 +11,20 @@
               padding: 8px;
                 }
         </style>
-        <form class="form"  method="post">
+        <form class="form" method="post">
             <h2> Sign-up</h2>
             <label>Username
-                <input type = "text" name = "username" minlength="3" maxlength="20" value ='{{username}}' />
+                <input type = "text" name = "username" value ='{{username}}' />
             </label>
             <p class="error">{{username_error}}</p>
             <br/>
             <label> Password
-                <input type = "password" name = "pword" minlength="3" maxlength="20" value ='{{pwrod}}' />
+                <input type = "password" name = "pword"  value ='{{pwrod}}' />
             </label>
             <p class="error">{{pword_error}}</p>
             <br/>
             <label>Verifiy Password
-                <input type = "password" name = "vpword" minlength="3" maxlength="20" value ='{{vpword}}' />
+                <input type = "password" name = "vpword" value ='{{vpword}}' />
             </label>
             <p class="error">{{vpword_error}}</p>
             <br/>
