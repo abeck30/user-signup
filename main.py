@@ -15,7 +15,7 @@ def index():
     template = jinja_env.get_template('index.html')
     return template.render()
 
-@app.route ('/missinginfo', methods=['POST'])
+@app.route ('/missinginfo', methods = ["POST"])
 def missinginfo():
     username = request.form['username']
     username = str(username)
@@ -52,7 +52,7 @@ def missinginfo():
         template = jinja_env.get_template('index.html')
         return template.render(username_error=username_error, pword_error=pword_error, vpword_error=vpword_error)
 
-@app.route('/welcome', methods=['POST'])
+@app.route('/welcome')
 def welcome ():
     username = request.form['username']
     template = jinja_env.get_template('welcome.html')
