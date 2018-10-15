@@ -9,7 +9,7 @@ app.config['DEBUG'] = True
 def index ():
     return render_template("userinfo.html")
 
-@app.route('/', methods=['POST'])
+@app.route('/signup', methods=['POST'])
 def validate_userinfo():
     username = request.form['form_name']
     password = request.form ['pass_word']
@@ -39,15 +39,8 @@ def validate_userinfo():
         useremail = ''   
        
     if not form_name_error and not pass_word_error and not vp_word_error and not useremail_error:
-        username = ('form_name')
-        return redirect ('/valid-userinfo'.format(username))
+        return render_template('userwelcome.html')
     else:
         return render_template('userinfo.html', form_name_error=form_name_error, pass_word_error=pass_word_error, vp_word_error=vp_word_error, useremail_error=useremail_error, username=username, password=password,vpword=vpassword,useremail=useremail)   
-
-
-@app.route('/valid-userinfo')
-def welcome():
-    form_name = request.form['form_name']
-    return render_template('userwelcome.html', form_name=form_name)
 
 app.run()

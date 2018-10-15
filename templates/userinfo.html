@@ -7,28 +7,28 @@
 </head>
 <body>
     <h1>User Signup</h1>
-    <form method="post">
+    <form action="/userwelcome.html" method="post">
       <label>Username
-        <input name="form_name" type="text" value={{form_name}}/>
+        <input name="form_name" type="text"/>
       </label>
       <p class="error">{{form_name_error}}</p>
       <br/>
       <label>Password
-          <input name="pass_word" type="password" value={{pass_word}}/>
+          <input name="pass_word" type="password"/>
       </label>
       <p class="error">{{pass_word_error}}</p>
       <br/>
       <label> Password Verification
-          <input name="vp_word" type="password" value={{vp_word}}/>
+          <input name="vp_word" type="password"/>
       </label>
       <p class="error">{{vp_word_error}}</p>
       <br/>
       <label> Email(optional)
-          <input name="useremail" type="text" value={{useremail}}/>
+          <input name="useremail" type="text"/>
       </label>
       <p class="error">{{useremail_error}}</p>
       <br/>
-      <input type="submit" value="Signup"/>
+      <input type="submit" value="Signup" />
     </form>
  </body>
 </html>
