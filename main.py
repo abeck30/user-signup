@@ -50,12 +50,9 @@ def validate_userinfo():
             useremail_error = "Not a valid email (CHARS)" 
             useremail = ''   
       
-    #if " " in useremail:
-        #useremail_error = "Not a valid email (SPACE)" 
-        #useremail = ''
-
-
-    
+    if " " in useremail:
+        useremail_error = "Not a valid email (SPACE)" 
+        useremail = ''
 
     if form_name_error or pass_word_error or vp_word_error or useremail_error:
         return render_template('userinfo.html', form_name_error=form_name_error, pass_word_error=pass_word_error, vp_word_error=vp_word_error, useremail_error=useremail_error, username=username, password=password,vpword=vpassword,useremail=useremail)   
