@@ -42,7 +42,7 @@ def validate_userinfo():
         vp_word_error = "Password verification does not match Password"
         vpassword = ''
 
-    if len(useremail) > 1 and len(useremail) <= 7:
+    if len(useremail) > 0 and len(useremail) <= 7:
         useremail_error = "Email address not valid" 
         useremail = '' 
 
